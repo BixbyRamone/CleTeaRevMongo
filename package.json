@@ -1,0 +1,25 @@
+{
+  "name": "cletearev",
+  "version": "1.0.0",
+  "description": "cleveland tea revival website, made with mongo database",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.13.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BixbyRamone/CleTeaRevMongo.git"
+  },
+  "author": "Gregory Draheim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BixbyRamone/CleTeaRevMongo/issues"
+  },
+  "homepage": "https://github.com/BixbyRamone/CleTeaRevMongo#readme"
+}
