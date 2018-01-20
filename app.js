@@ -20,6 +20,11 @@ mongoose.connect('mongodb://localhost/cletearev-dev', {
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+// Linking CSS
+app.use(express.static('public/css'));
+// Setting up image links
+app.use(express.static('public/images'));
+
 // ===========Routes==================
 const index = require('./routes/htmlroutes.js')(app);
 //============Running Server==========
