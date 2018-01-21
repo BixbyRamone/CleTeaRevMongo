@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('../models/Tea');
-// const Tea = mongoose.model('teas');
+const Tea = mongoose.model('teas');
 
 module.exports = {
 
@@ -43,8 +43,11 @@ module.exports = {
 
     		});
     	} else {
+    		console.log('========================');
+    		console.log(req.body);
+    		console.log('========================');
     		let newTea = {
-    			title: req.body.title,
+    			name: req.body.name,
     			pricecup: req.body.pricecup,
     			pricepot: req.body.pricepot,
     			priceoz: req.body.priceoz,
@@ -55,7 +58,7 @@ module.exports = {
     		.save()
     		.then( tea=> {
     			// add req.flash
-    			res.redirect('/admin/admin_teas');
+    			res.redirect('/admin/teas');
     		})
     	}
 	}

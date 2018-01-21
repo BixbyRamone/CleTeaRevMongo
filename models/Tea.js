@@ -4,32 +4,32 @@ const Schema = mongoose.Schema;
 //Create Schema
 const IdeaSchema = new Schema({
 	name:{
-		type: String,
-		required: true
+		type: String
+		// required: true
 	},
-	priceCup:{
-		type: Number,
-		required: true
+	pricecup:{
+		type: Number
+		// required: true
 	},
-	pricePot:{
-		type: Number,
-		required: true
+	pricepot:{
+		type: Number
+		// required: true
 	},
-	priceOz:{
-		type: Number,
-		required: true
+	priceoz:{
+		type: Number
+		// required: true
 	},
 	details:{
-		type: String,
-		required: true
+		type: String
+		// required: true
 	},
 	category:{
-		type: String,
-		required: true
+		type: String
+		// required: true
 	},
 	available:{
-		type: String,
-		required: true
+		type: String
+		// required: true
 	},
 	imageLink:{
 		type: String
@@ -40,4 +40,4 @@ const IdeaSchema = new Schema({
 	}
 });
 
-mongoose.model('ideas', IdeaSchema);
+mongoose.model('teas', IdeaSchema);

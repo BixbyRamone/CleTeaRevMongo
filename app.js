@@ -16,6 +16,11 @@ mongoose.connect('mongodb://localhost/cletearev-dev', {
 .then(()=> console.log('MongoDB Connected...'))
 .catch(err => console.log(err));
 
+
+// Load Models
+// require('./models/Tea');
+// const Tea = mongoose.model('teas');
+
 // =======Handlebars Middleware=======
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
