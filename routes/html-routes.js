@@ -2,9 +2,15 @@ let htmlController = require('../controllers/htmlControllers.js');
 
 module.exports = (app)=> {
 
-	app.get('/', htmlController.home),
-	
+	app.get('/', htmlController.home),	
 	app.get('/menu', htmlController.menu),
+	app.get('/wholesale', htmlController.wholesale),
+	app.get('/kombucha', htmlController.kombucha),
+	app.get('/calendar', htmlController.calendar),
+	app.get('/news', htmlController.news),
+	app.get('/locations', htmlController.locations),
+	app.get('/about', htmlController.about),
+	app.get('/store', htmlController.store),
 
 // Admin html links
 	app.get('/admin', htmlController.adminHome),
