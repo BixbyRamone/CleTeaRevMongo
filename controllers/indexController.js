@@ -29,21 +29,26 @@ module.exports = {
     	if(!req.body.category) {
     		errors.push({text: 'Please add a category'});
     	}
+        
+
+        console.log(errors);
     	
 
     	if(errors.length > 0){
     		res.render('admin/admin_teas', {
     			errors: errors,
-    			title: req.body.title,
+    			name: req.body.name,
     			pricecup: req.body.pricecup,
     			pricepot: req.body.pricepot,
     			priceoz: req.body.priceoz,
     			description: req.body.description,
-    			category: req.body.category
+    			category: req.body.category,
+                available: req.body.available
 
     		});
     	} else {
     		console.log('========================');
+            console.log('indexController file')
     		console.log(req.body);
     		console.log('========================');
     		let newTea = {
@@ -52,7 +57,8 @@ module.exports = {
     			pricepot: req.body.pricepot,
     			priceoz: req.body.priceoz,
     			description: req.body.description,
-    			category: req.body.category
+    			category: req.body.category,
+                available: req.body.available
     		}
     		new Tea(newTea)
     		.save()

@@ -2,20 +2,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 //Create Schema
-const IdeaSchema = new Schema({
+const OtherSchema = new Schema({
 	name:{
 		type: String,
 		required: true
 	},
-	pricecup:{
-		type: Number,
-		required: true
-	},
-	pricepot:{
-		type: Number,
-		required: true
-	},
-	priceoz:{
+	price:{
 		type: Number,
 		required: true
 	},
@@ -40,4 +32,4 @@ const IdeaSchema = new Schema({
 	}
 });
 
-mongoose.model('teas', IdeaSchema);
+mongoose.model('others', OtherSchema);

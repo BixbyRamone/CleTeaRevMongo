@@ -1,4 +1,6 @@
-
+const mongoose = require('mongoose');
+require('../models/Tea');
+const Tea = mongoose.model('teas');
 
 module.exports = {
 
@@ -12,10 +14,24 @@ module.exports = {
 
 	// app.get('/menu', htmlController.menu)
 	menu: (req, res)=> {
+		let catArray = [];
 		let title = 'Menu';
-		res.render('menu', {
-		title: title
-	});
+		Tea.find({})
+    	.sort()
+    	.then(teas => {
+    		for (var i = 0; i < teas.length; i++) {
+    			if (catArray.indexOf(teas[i].category) === -1){
+    				catArray.push(teas[i].category);
+    			}
+    		}
+    		console.log(catArray);
+    		res.render('menu', {
+    			title: title,
+    			teas: teas,
+    			catArray: catArray
+    		});
+    	});
+    	
 	},
 
 	// 	app.get('/wholesale', htmlController.wholesale)

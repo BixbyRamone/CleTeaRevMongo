@@ -1,3 +1,44 @@
 {{> _navbar}}
 
 <h1>Menu</h1>
+
+<div class="container">
+
+	<div class="row">
+
+		<form class="col-lg-2">
+
+			<div class="form-group">
+                <label for="availability">Available</label>
+                <input id="available-checkbox" type="checkbox" name="availability" class="available" checked>
+            </div>
+			
+		</form>
+
+		<div class="col-lg-8">
+			
+			{{#each catArray}}
+			<div class="card card-body">
+				<h2>{{this}}</h2>
+				{{#each teas}}
+					<h3>{{name}}</h3>
+					{{!-- {{#if tea.category == this}} --}}
+						{{!-- <div class="card card-body"> --}}
+							{{!-- <p>{{tea.name}}</p> --}}
+							{{!-- <p>{{tea.pricecup}}</p> --}}
+						{{!-- </div> --}}
+					{{!-- {{/if}} --}}
+				{{/each}}
+			</div>
+			{{else}}
+				<p>No teas listed</p>
+			{{/each}}
+
+		</div>
+		
+	</div>
+	
+
+
+
+</div>
