@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const exphbs = require('express-handlebars');
+const helpers = require('handlebars-helpers');
+const comparison = helpers.comparison();
 const mongoose = require('mongoose');
 
 const app = express();

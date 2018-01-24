@@ -16,23 +16,27 @@
 		</form>
 
 		<div class="col-lg-8">
+
+			<div class="card card-body">
+				<h2>Test</h2>
+				
+					<h3>Name Test</h3>
+										
+			</div>
 			
 			{{#each catArray}}
 			<div class="card card-body">
 				<h2>{{this}}</h2>
-				{{#each teas}}
-					<h3>{{name}}</h3>
-					{{!-- {{#if tea.category == this}} --}}
-						{{!-- <div class="card card-body"> --}}
-							{{!-- <p>{{tea.name}}</p> --}}
-							{{!-- <p>{{tea.pricecup}}</p> --}}
-						{{!-- </div> --}}
-					{{!-- {{/if}} --}}
-				{{/each}}
+					
+
+
 			</div>
 			{{else}}
-				<p>No teas listed</p>
 			{{/each}}
+
+
+		{{> _experiemnt}}
+			
 
 		</div>
 		
