@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const exphbs = require('express-handlebars');
+const helpers = require('handlebars-helpers')();
+
 const mongoose = require('mongoose');
 
 const app = express();
@@ -34,7 +36,8 @@ app.use(bodyParser.json());
 app.use(express.static('public/css'));
 // Setting up image links
 app.use(express.static('public/images'));
-// Setting up Google Fonts
+// Setting up Javascript Links
+app.use(express.static('public/js'));
 
 // ===========Routes==================
 require('./routes/html-routes.js')(app);

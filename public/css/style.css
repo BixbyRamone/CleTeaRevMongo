@@ -3,8 +3,22 @@ body {
 }
 
 #nav-bar-id {
+	z-index: 2;
 	color: rgb(242, 247, 255);
-	background: #ffa566;
+	background: #ffa566; 
+	background: linear-gradient(to bottom, 
+                    rgba(242, 247, 255, 1), 
+                    rgba(255, 165, 102, 1) 90%);
+}
+
+#nav-bar-background {
+	color: rgb(232, 237, 245);
+	z-index: 1;
+	background-color: rgb(232, 237, 245);; 
+}
+
+.nav-padding {
+	padding-top: 60px;
 }
 
 #nav-head {
@@ -22,6 +36,8 @@ body {
 #main-page-pic{
 	padding-bottom: 5%;
 	width: 100%;
+	padding-top: 60px;
+
 }
 
 #main-page-pic-text {
@@ -40,6 +56,11 @@ body {
 #main-p-tile {
 	width: 100%;
 	padding: 2%;
+	border-radius: 50%;
+	border-width: 10px;
+	border-style: solid;
+	border-color: rgba(255, 165, 102, .6);
+	
 }
 
 #img-lnk-txt {
@@ -54,3 +75,18 @@ body {
 	font-size: 300%;
 	text-shadow: 0 0 5px #ffa566;
 }
+
+.tea-card {
+	float: left;
+}
+
+#cat-chkbx {
+	 margin: auto;
+    width: auto;
+    /*border: 3px solid green;*/
+    background-color: #afc0db;
+    padding: 10px;
+    text-align: center;
+}
+
+
